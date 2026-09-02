@@ -1,12 +1,12 @@
-from rest_framework.views import APIViwe
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
 from drf_spectacular.utils import extend_schema
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .registry import registry
 
 
-class EnumsListView(APIViwe):
+class EnumsListView(APIView):
     """
     API endpoint for all registred enums
     """

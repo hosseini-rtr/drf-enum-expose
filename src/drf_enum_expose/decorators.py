@@ -1,7 +1,9 @@
+from typing import Optional
+
 from .registry import registry
 
 
-def register_enum(name:Optional[str]=None):
+def register_enum(name: Optional[str] = None):
     """
     Decorator to register an enum for API exposure
 
