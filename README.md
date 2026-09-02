@@ -5,7 +5,7 @@ Simple and automatic enum management for Django with REST API exposure.
 ## Installation
 
 ```bash
-pip install django-enum-tools
+pip install drf-enum-expose
 ```
 
 ## Quick Start
