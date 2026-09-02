@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "django-filtering>=0.7.1",
+    "djangorestframework>=3.18.0",
+    "drf-spectacular>=0.30.0",
+    "setuptools>=84.0.0",
+    "wheel>=0.48.0",
+]
