@@ -24,21 +24,14 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-requires-python = ">=3.11,<3.13"
-dependencies = [
-    "Django>=3.2",
-    "djangorestframework>=3.12",
-    "setuptools>=84.0.0",
-    "twine>=7.0.0",
-    "wheel>=0.48.0",
-]
+requires-python = ">=3.11"
+dependencies = ["Django>=3.2", "djangorestframework>=3.12"]
 
 [project.urls]
 Homepage = "https://github.com/hosseini-rtr/drf-enum-expose"
@@ -49,6 +42,9 @@ Issues = "https://github.com/hosseini-rtr/drf-enum-expose/issues"
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
+    "setuptools>=84.0.0",
+    "twine>=7.0.0",
+    "wheel>=0.48.0",
     "pytest-django>=4.5",
     "black>=23.0",
     "isort>=5.12",
@@ -65,7 +61,7 @@ test = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["src"]  
+where = ["src"]
 include = ["drf_enum_expose*"]
 exclude = ["tests*", "examples*"]
 
