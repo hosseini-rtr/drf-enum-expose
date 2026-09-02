@@ -21,7 +21,7 @@ INSTALLED_APPS = [
 2. Register your enums:
 ```python
 from django.db import models
-from enum_tools import register_enum
+from drf_enum_expose import register_enum
 
 @register_enum
 class ContentType(models.TextChoices):
@@ -32,7 +32,7 @@ class ContentType(models.TextChoices):
 3. Include URLs:
 ```python
 urlpatterns = [
-    path('api/enums/', include('enum_tools.urls')),
+    path('api/enums/', include('drf_enum_expose.urls')),
 ]
 ```
 

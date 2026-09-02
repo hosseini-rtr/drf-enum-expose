@@ -1,13 +1,84 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "drf-enum-expose"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Simple enum tools for Django with automatic API exposure"
 readme = "README.md"
-requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "Hosseini-RTR", email = "h.hosseini.me@gmail.com" }]
+maintainers = [{ name = "Hosseini-RTR", email = "h.hosseini.me@gmail.com" }]
+keywords = ["django", "enum", "rest", "api", "tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.11,<3.13"
 dependencies = [
-    "django-filtering>=0.7.1",
-    "djangorestframework>=3.18.0",
-    "drf-spectacular>=0.30.0",
+    "Django>=3.2",
+    "djangorestframework>=3.12",
     "setuptools>=84.0.0",
+    "twine>=7.0.0",
     "wheel>=0.48.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/hosseini-rtr/drf-enum-expose"
+Documentation = "https://drf-enum-expose.readthedocs.io/"
+Repository = "https://github.com/hosseini-rtr/drf-enum-expose.git"
+Issues = "https://github.com/hosseini-rtr/drf-enum-expose/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-django>=4.5",
+    "black>=23.0",
+    "isort>=5.12",
+    "flake8>=7.0,<8.0",
+    "mypy>=1.0",
+    "pre-commit>=3.0",
+]
+docs = ["sphinx>=6.0", "sphinx-rtd-theme>=1.2"]
+test = [
+    "pytest>=7.0",
+    "pytest-django>=4.5",
+    "pytest-cov>=4.0",
+    "factory-boy>=3.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]  
+include = ["drf_enum_expose*"]
+exclude = ["tests*", "examples*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+python_files = "test_*.py"
+addopts = "-v --cov=drf_enum_expose --cov-report=html"
+testpaths = ["tests"]
