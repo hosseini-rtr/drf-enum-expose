@@ -8,7 +8,7 @@ from .registry import registry
 
 class EnumsListView(APIView):
     """
-    API endpoint for all registred enums
+    API endpoint for all registered enums
     """
 
     permission_classes = [AllowAny]
@@ -42,7 +42,7 @@ class EnumsListView(APIView):
         )
 
 
-class EnumDetailsView(APIViwe):
+class EnumDetailsView(APIView):
     """
     API endpoint for a specific enum
     """
@@ -56,7 +56,7 @@ class EnumDetailsView(APIViwe):
         return Response({"name": enum_name, "choices": choices, "count": len(choices)})
 
 
-class EnumStatsView(APIViwe):
+class EnumStatsView(APIView):
     """
     Statistics about registered enums
     """
@@ -71,7 +71,7 @@ class EnumStatsView(APIViwe):
             {
                 "total_enums": len(enums),
                 "total_values": total_values,
-                "enum_names": list(enums.key()),
+                "enum_names": list(enums.keys()),
                 "details": {
                     name: {
                         "count": len(choices),

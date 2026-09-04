@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "drf-enum-expose"
-version = "1.0.1"
+version = "0.1.0"
 description = "Simple enum tools for Django with automatic API exposure"
 readme = "README.md"
 license = { text = "MIT" }
@@ -31,7 +31,11 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.11"
-dependencies = ["Django>=3.2", "djangorestframework>=3.12"]
+dependencies = [
+    "Django>=3.2",
+    "djangorestframework>=3.12",
+    "drf-spectacular>=0.30.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/hosseini-rtr/drf-enum-expose"
