@@ -1,7 +1,7 @@
-Django Enum Tools - Attribution Notice
+DRF Enum Expose - Attribution Notice
 
 Copyright (c) 2026 Hosseini-RTR
-Developed by [Your Name/Team]
+Developed by Hosseini-RTR
 GitHub: https://github.com/hosseini-rtr/drf-enum-expose
 
 ====================================
@@ -12,20 +12,20 @@ When using this software in any project, you must include proper
 attribution. Below are examples of how to do this:
 
 1. In documentation:
-   "This project uses Django Enum Tools, an open-source library developed
+   "This project uses DRF-Enum-Expose, an open-source library developed
    by [Hosseini-rtr] (https://github.com/hosseini-rtr/drf-enum-expose)"
 
 2. In code comments:
-   # DRF Enum Expose - Developed by Hosseini-rtr
+   # DRF Enum Expose - Developed by Hosseini-RTR
    # https://github.com/hosseini-rtr/drf-enum-expose
 
 3. In README or About section:
-   "This product includes Django Enum Tools
+   "This product includes DRF Enum Expose
    (https://github.com/hosseini-rtr/drf-enum-expose)
    Copyright (c) 2026 [Hosseini-rtr]"
 
 4. In CLI tools (if applicable):
-   "Django Enum Tools - Developed by [Your Name/Organization]"
+   "DRF Enum Expose - Developed by Hosseini-RTR"
 
 ====================================
 Thank you for using Django Enum Tools!
